@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+}
+
+/* Add this CSS to your global CSS file or component style */
+/* Style for the dropdown menu */
+.select-container {
+  position: relative;
+}
+
+.select-container select {
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem 2rem 0.5rem 1rem; /* Adjust padding as needed */
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+/* Style for the arrow icon */
+.select-container::after {
+  content: '\25BC'; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 0.75rem; /* Adjust position as needed */
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #fff; /* Adjust color as needed */
+}
+
+/* Style for the dropdown menu options */
+.select-container select option {
+  background-color: #4a5568; /* Adjust background color as needed */
+  color: #fff; /* Adjust text color as needed */
+}
+
+/* Style for the selected option */
+.select-container select option:checked {
+  background-color: #2d3748; /* Adjust background color as needed */
+}
